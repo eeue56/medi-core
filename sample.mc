@@ -34,3 +34,14 @@ let lessThanTenExamples = examples with time < 10
 -- you can also combine these with of
 
 let textOfLessThanTenExamples = text of examples with time < 10
+
+-- Lists and tuples are converted when they are the right size
+
+let myList = ["hello", 5]
+let myTuple = ("hello", 5)
+
+let newExample = Example myList
+let newExample = Example myTuple
+
+addText myList
+addText myTuple
