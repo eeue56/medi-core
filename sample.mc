@@ -45,3 +45,6 @@ let newExample = Example myTuple
 
 addText myList
 addText myTuple
+
+let examples = map Example $ zip ["a".."z"] [1..26]
+
