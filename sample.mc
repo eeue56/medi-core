@@ -48,3 +48,13 @@ addText myTuple
 
 let examples = map Example $ zip ["a".."z"] [1..26]
 
+-- where works as a setter
+let firstExample = examples !! 0 where time = 1
+
+-- the same as increaseTime :: Example -> Example
+increaseTime on Example
+increaseTime x = x where time = 1 + time of x 
+
+-- the same as increaseTime :: Example -> Int -> Int -> Example
+increaseTime on Example using Int -> Int
+increaseTime x t1 t2 = x where time = t1 - t2
